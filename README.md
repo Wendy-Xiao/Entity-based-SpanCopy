@@ -9,7 +9,19 @@ transformers == 4.11.3
 
 ## Usage
 ### SpanCopy Model
-To train the SpanCopy model with global relevance, run with `--use_global_relevance` with proper `--beta`. The beta used in our experiments is set by 
+To train the SpanCopy model with global relevance, run with `--use_global_relevance` with proper `--beta`. The beta used in our experiments is set by grid search on small subsets  of each dataset (2k for training and 200 for validation). 
+
+| Dataset | beta |
+| --- | ----------- |
+| CNNDM | 0.5| 
+| CNNDM-filtered | 0.5 |
+| XSum | 0.6 | 
+| XSum-filtered | 0.9 |
+| Pubmed | 0.4 | 
+| Pubmed-filtered | 0.4 |
+| arXiv | 0.4 | 
+| arXiv-filtered | 0.5 |
+
 To train the SpanCopy model, run without above two options.
 ```
 python spanCopyTrainer.py --gpus 1 \
