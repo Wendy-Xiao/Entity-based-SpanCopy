@@ -3,8 +3,11 @@ Official code for [Entity-based SpanCopy for Abstractive Summarization to Improv
 
 ## Dependencies
 python == 3.7.11
+
 pytorch == 1.10.0
+
 pytorch_lightning == 1.5.3
+
 transformers == 4.11.3
 
 ## Usage
