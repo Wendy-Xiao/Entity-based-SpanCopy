@@ -2,7 +2,6 @@ from os import truncate
 from pandas import cut
 from torch.utils.data import DataLoader, Dataset
 import torch
-from sklearn.feature_extraction.text import CountVectorizer
 import pdb
 import numpy as np
 from transformers import PegasusTokenizerFast
@@ -511,15 +510,6 @@ def collate_fn_spanCopy(batch):
     )
 
 
-# def build_vocabulary(all_docs,vocabulary_size,saveas=None):
-#     vectorizer = CountVectorizer(max_features=vocabulary_size)
-#     vectorizer.fit_transform(all_docs)
-#     word= list(vectorizer.get_feature_names_out())
-
-#     if saveas!=None:
-
-#     return vocab
-
 if __name__ == "__main__":
     # data_path = "/scratch/xiaowen3/dataset/cnndm_with_ent.pt"
     # print("load tokenizer")
@@ -542,7 +532,11 @@ if __name__ == "__main__":
     print("load dataset")
     dataset = torch.load(data_path)
     d = spanCopySummDataset(
-        dataset, "cnndm", tokenizer, max_length_input=512, max_length_output=64,
+        dataset,
+        "cnndm",
+        tokenizer,
+        max_length_input=512,
+        max_length_output=64,
     )
     all_ent_num = []
     wrong = 0
@@ -565,4 +559,3 @@ if __name__ == "__main__":
     # print("start iteration")
     # for b in train_dataloader:
     #     a = b
-
