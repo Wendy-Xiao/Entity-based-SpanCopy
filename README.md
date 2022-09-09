@@ -1,5 +1,5 @@
 # Entity-based-SpanCopy
-Official code for (Entity-based SpanCopy for Abstractive Summarization to Improve the Factual Consistency)[https://arxiv.org/abs/2209.03479]
+Official code for [Entity-based SpanCopy for Abstractive Summarization to Improve the Factual Consistency](https://arxiv.org/abs/2209.03479)
 
 ## Dependencies
 python == 3.7.11
@@ -43,5 +43,5 @@ python spanCopyTrainer.py --mode test \
 To train/test the Pegasus model, simply run the `pegasus_trainer.py` with the same settings specified above.
 
 ## Datasets
-All the filtered/unfiltered datasets (CNNDM/Xsum/Pubmed/arXiv) can be found (here)[https://drive.google.com/drive/folders/1I_NhJ44VVnaZ6GWY0hNjoLdYoCVgd_KV?usp=sharing].
+All the filtered/unfiltered datasets (CNNDM/Xsum/Pubmed/arXiv) can be found [here](https://drive.google.com/drive/folders/1I_NhJ44VVnaZ6GWY0hNjoLdYoCVgd_KV?usp=sharing).
 
